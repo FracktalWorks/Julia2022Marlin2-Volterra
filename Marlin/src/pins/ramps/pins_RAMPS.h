@@ -172,15 +172,24 @@
 //
 // Temperature Sensors
 //
-#ifndef TEMP_0_PIN
-  #define TEMP_0_PIN                          13//15  // Analog Input
-#endif
-#ifndef TEMP_1_PIN
-  #define TEMP_1_PIN                          15//13  // Analog Input
-#endif
-#ifndef TEMP_BED_PIN
-  #define TEMP_BED_PIN                        14  // Analog Input
-#endif
+// #ifndef TEMP_0_PIN
+//   #define TEMP_0_PIN                          13//15  // Analog Input
+// #endif
+// #ifndef TEMP_1_PIN
+//   #define TEMP_1_PIN                          15//13  // Analog Input
+// #endif
+// #ifndef TEMP_BED_PIN
+//   #define TEMP_BED_PIN                        14  // Analog Input
+// #endif
+
+////////////Fracktal Works Change/////////////////
+#define TEMP_0_PIN         4   // Analog Input
+#define TEMP_1_PIN         3   // Analog Input
+#define TEMP_2_PIN         13   // Analog Input
+#define TEMP_3_PIN         15   // Analog Input
+#define TEMP_BED_PIN       14   // Analog Input
+
+////////////Fracktal Works Change end/////////////////
 
 //
 // SPI for MAX Thermocouple
@@ -206,6 +215,13 @@
 #endif
 
 #define HEATER_0_PIN                MOSFET_A_PIN
+
+//////Fracktal Works chamber heater and filament heater pin///////
+//////START//////////////////////////////////////////
+#define HEATER_1_PIN   MOSFET_D_PIN
+    #define HEATER_2_PIN   47
+    #define HEATER_3_PIN   45                
+//////END//////////////////////////////////////////
 
 #if FET_ORDER_EFB                                 // Hotend, Fan, Bed
   #define HEATER_BED_PIN            MOSFET_C_PIN
