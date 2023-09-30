@@ -565,7 +565,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 460//275
+#define HEATER_0_MAXTEMP 480//275
 #define HEATER_1_MAXTEMP 460//275
 #define HEATER_2_MAXTEMP 120//275
 #define HEATER_3_MAXTEMP 80//275
@@ -606,11 +606,11 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  150,  150 } //{  22.20,  22.20 }
+    #define DEFAULT_Kp_LIST {  200,  200 } //{  22.20,  22.20 }
     #define DEFAULT_Ki_LIST  {  100,  100 }//{   1.08,   1.08 }
     #define DEFAULT_Kd_LIST  {  1,  1 }//{ 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  150
+    #define DEFAULT_Kp  150//200
     #define DEFAULT_Ki  100
     #define DEFAULT_Kd  1
   #endif
