@@ -28,7 +28,7 @@
  * ATmega2560
  */
 
-#if HOTENDS > 2 || E_STEPPERS > 2
+#if HOTENDS > 5 || E_STEPPERS > 5
   #error "MKS GEN L V2.1 supports up to 2 hotends / E steppers."
 #endif
 

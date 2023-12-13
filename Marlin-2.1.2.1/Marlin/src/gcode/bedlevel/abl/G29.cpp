@@ -262,6 +262,12 @@ G29_TYPE GcodeSuite::G29() {
   // Don't allow auto-leveling without homing first
   if (homing_needed_error()) G29_RETURN(false, false);
 
+    /* FRACKTAL WORKS: START */     //FW
+  do_blocking_move_to_xy(5, 5, MMM_TO_MMS(50*60));    //FW  
+  do_blocking_move_to_z(3, MMM_TO_MMS(5*60));         //FW
+  /* FRACKTAL WORKS: END */         //FW
+
+  
   // 3-point leveling gets points from the probe class
   #if ENABLED(AUTO_BED_LEVELING_3POINT)
     vector_3 points[3];

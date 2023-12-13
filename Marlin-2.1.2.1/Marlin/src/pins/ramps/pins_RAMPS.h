@@ -136,7 +136,7 @@
 // Z Probe (when not Z_MIN_PIN)
 //
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                     32
+  #define Z_MIN_PROBE_PIN                    57// 32    //FW  
 #endif
 
 //
@@ -194,7 +194,34 @@
 #ifndef E1_CS_PIN
   #define E1_CS_PIN                           44
 #endif
+///////////////////////////////////Fracktal Works Change/////////////////   //FW
+#ifndef E2_STEP_PIN
+  #define E2_STEP_PIN                         36
+#endif
+#ifndef E2_DIR_PIN
+  #define E2_DIR_PIN                          34
+#endif
+#ifndef E2_ENABLE_PIN
+  #define E2_ENABLE_PIN                       30
+#endif
+#ifndef E2_CS_PIN
+  #define E2_CS_PIN                           44
+#endif
 
+#ifndef E3_STEP_PIN
+  #define E3_STEP_PIN                         36
+#endif
+#ifndef E3_DIR_PIN
+  #define E3_DIR_PIN                          34
+#endif
+#ifndef E3_ENABLE_PIN
+  #define E3_ENABLE_PIN                       30
+#endif
+#ifndef E3_CS_PIN
+  #define E3_CS_PIN                           44
+#endif
+//////////////////////Fracktal Works Change end/////////////////
+//
 //
 // Temperature Sensors
 //
@@ -228,19 +255,25 @@
   #define MOSFET_C_PIN                         8
 #endif
 #ifndef MOSFET_D_PIN
-  #define MOSFET_D_PIN                        -1
+  #define MOSFET_D_PIN                        7//-1
 #endif
 
 #define HEATER_0_PIN                MOSFET_A_PIN
+//////Fracktal Works chamber heater and filament heater pin///////
+//////START//////////////////////////////////////////
+#define HEATER_1_PIN   MOSFET_D_PIN
+    #define HEATER_2_PIN   47
+    #define HEATER_3_PIN   45                
+//////END//////////////////////////////////////////
 
 #if FET_ORDER_EFB                                 // Hotend, Fan, Bed
   #ifndef HEATER_BED_PIN
     #define HEATER_BED_PIN          MOSFET_C_PIN
   #endif
 #elif FET_ORDER_EEF                               // Hotend, Hotend, Fan
-  #define HEATER_1_PIN              MOSFET_B_PIN
+  //#define HEATER_1_PIN              MOSFET_B_PIN    //FW
 #elif FET_ORDER_EEB                               // Hotend, Hotend, Bed
-  #define HEATER_1_PIN              MOSFET_B_PIN
+  //#define HEATER_1_PIN              MOSFET_B_PIN    //FW
   #ifndef HEATER_BED_PIN
     #define HEATER_BED_PIN          MOSFET_C_PIN
   #endif
