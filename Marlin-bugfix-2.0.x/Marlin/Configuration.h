@@ -192,7 +192,7 @@
 
 // This defines the number of extruders
 // :[0, 1, 2, 3, 4, 5, 6, 7, 8]
-#define EXTRUDERS 4
+#define EXTRUDERS 3
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
@@ -499,7 +499,7 @@
 #define TEMP_SENSOR_0 20
 #define TEMP_SENSOR_1 20
 #define TEMP_SENSOR_2 3
-#define TEMP_SENSOR_3 3
+#define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
@@ -1353,7 +1353,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR    false//false
 #define INVERT_Y_DIR    false//false
-#define INVERT_Z_DIR    true//true
+#define INVERT_Z_DIR    false//true//true
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
