@@ -1493,10 +1493,10 @@
 #define XY_PROBE_FEEDRATE (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (2*60)    //FW
+#define Z_PROBE_FEEDRATE_FAST (2.5*60)//(2*60)    //FW
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 15)      //FW
+#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 10)//(Z_PROBE_FEEDRATE_FAST / 15)      //FW
 
 /**
  * Probe Activation Switch
