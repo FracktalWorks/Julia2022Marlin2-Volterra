@@ -937,7 +937,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100,  100, 503.937, 140 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100,  100, 200, 140 } //{ 100,  100, 503.937, 140 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1353,7 +1353,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR    false//false
 #define INVERT_Y_DIR    false//false
-#define INVERT_Z_DIR    true//true
+#define INVERT_Z_DIR    false//  for Southern
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
