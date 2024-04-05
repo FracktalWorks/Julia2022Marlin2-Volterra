@@ -230,7 +230,6 @@
 #endif
 #ifndef TEMP_1_PIN
   #define TEMP_1_PIN                          3  // Analog Input
-  
 #endif
 #define TEMP_2_PIN         13   // Analog Input
 #define TEMP_3_PIN         15   // Analog Input

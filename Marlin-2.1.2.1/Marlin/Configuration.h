@@ -75,7 +75,7 @@
  */
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
+//#define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
 //#define SHOW_CUSTOM_BOOTSCREEN
@@ -135,7 +135,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "TVS Volterra Dual 24V UART jumpers with TMC2209 on MKS GenL v2.1"    //FW
+#define CUSTOM_MACHINE_NAME "Southern Volterra 24V UART jumpers with TMC2209 on MKS GenL v2.1"    //FW
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -227,7 +227,7 @@
 
 // This defines the number of extruders
 // :[0, 1, 2, 3, 4, 5, 6, 7, 8]
-#define EXTRUDERS 3   //FW
+#define EXTRUDERS 4   //FW
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
@@ -243,22 +243,22 @@
 #endif
 
 // A dual extruder that uses a single stepper motor
-#define SWITCHING_EXTRUDER      //FW
+//#define SWITCHING_EXTRUDER      //FW
 #if ENABLED(SWITCHING_EXTRUDER)
   #define SWITCHING_EXTRUDER_SERVO_NR 0
-  #define SWITCHING_EXTRUDER_SERVO_ANGLES { 0, 180 } // Angles for E0, E1[, E2, E3]     //FW
+  #define SWITCHING_EXTRUDER_SERVO_ANGLES { 0, 180} // Angles for E0, E1[, E2, E3]     //FW
   #if EXTRUDERS > 3
     #define SWITCHING_EXTRUDER_E23_SERVO_NR 1
   #endif
 #endif
 
 // A dual-nozzle that uses a servomotor to raise/lower one (or both) of the nozzles
-//#define SWITCHING_NOZZLE
+#define SWITCHING_NOZZLE
 #if ENABLED(SWITCHING_NOZZLE)
   #define SWITCHING_NOZZLE_SERVO_NR 0
   //#define SWITCHING_NOZZLE_E1_SERVO_NR 1          // If two servos are used, the index of the second
-  #define SWITCHING_NOZZLE_SERVO_ANGLES { 0, 90 }   // Angles for E0, E1 (single servo) or lowered/raised (dual servo)
-  #define SWITCHING_NOZZLE_SERVO_DWELL 2500         // Dwell time to wait for servo to make physical move
+  #define SWITCHING_NOZZLE_SERVO_ANGLES { 0, 180}   // Angles for E0, E1 (single servo) or lowered/raised (dual servo)
+  #define SWITCHING_NOZZLE_SERVO_DWELL 5000         // Dwell time to wait for servo to make physical move
 #endif
 
 /**
@@ -538,7 +538,7 @@
  */
 #define TEMP_SENSOR_0 20    //FW
 #define TEMP_SENSOR_1 20    //FW
-#define TEMP_SENSOR_2 3     //FW
+#define TEMP_SENSOR_2 3    
 #define TEMP_SENSOR_3 3     //FW
 #define TEMP_SENSOR_4 0
 #define TEMP_SENSOR_5 0
@@ -546,7 +546,7 @@
 #define TEMP_SENSOR_7 0
 #define TEMP_SENSOR_BED 3   //FW
 #define TEMP_SENSOR_PROBE 0
-#define TEMP_SENSOR_CHAMBER 0
+#define TEMP_SENSOR_CHAMBER 0   //FW
 #define TEMP_SENSOR_COOLER 0
 #define TEMP_SENSOR_BOARD 0
 #define TEMP_SENSOR_REDUNDANT 0
@@ -582,9 +582,9 @@
 #endif
 
 #if TEMP_SENSOR_CHAMBER
-  #define TEMP_CHAMBER_RESIDENCY_TIME 10  // (seconds) Time to wait for chamber to "settle" in M191
-  #define TEMP_CHAMBER_WINDOW          1  // (°C) Temperature proximity for the "temperature reached" timer
-  #define TEMP_CHAMBER_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
+  #define TEMP_CHAMBER_RESIDENCY_TIME 0  // (seconds) Time to wait for chamber to "settle" in M191
+  #define TEMP_CHAMBER_WINDOW          15  // (°C) Temperature proximity for the "temperature reached" timer
+  #define TEMP_CHAMBER_HYSTERESIS      20  // (°C) Temperature proximity considered "close enough" to the target
 #endif
 
 /**
@@ -628,7 +628,7 @@
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
 #define BED_MAXTEMP      150
-#define CHAMBER_MAXTEMP  60
+#define CHAMBER_MAXTEMP  120
 
 /**
  * Thermal Overshoot
