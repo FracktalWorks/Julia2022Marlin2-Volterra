@@ -8,29 +8,29 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/Vijay/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/Marlin",
-                "C:/Users/Vijay/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/libdeps/mega2560/TMCStepper/src",
-                "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
-                "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/cores/arduino",
-                "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/variants/mega",
-                "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "c:/Users/lenovo/OneDrive - Fracktal Works Private Limited/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/Marlin",
+                "c:/Users/lenovo/OneDrive - Fracktal Works Private Limited/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/libdeps/mega2560/TMCStepper/src",
+                "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/variants/mega",
+                "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/Vijay/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/Marlin",
-                    "C:/Users/Vijay/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/libdeps/mega2560/TMCStepper/src",
-                    "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                    "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                    "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
-                    "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/cores/arduino",
-                    "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/variants/mega",
-                    "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                    "C:/Users/Vijay/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "c:/Users/lenovo/OneDrive - Fracktal Works Private Limited/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/Marlin",
+                    "c:/Users/lenovo/OneDrive - Fracktal Works Private Limited/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/libdeps/mega2560/TMCStepper/src",
+                    "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/variants/mega",
+                    "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/lenovo/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                     ""
                 ]
             },
@@ -47,7 +47,7 @@
             ],
             "cStandard": "gnu11",
             "cppStandard": "gnu++17",
-            "compilerPath": "C:/Users/Vijay/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerPath": "C:/Users/lenovo/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
             "compilerArgs": [
                 "-mmcu=atmega2560",
                 ""

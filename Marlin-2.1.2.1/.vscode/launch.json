@@ -12,9 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "C:/Users/Vijay/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/build/mega2560/firmware.elf",
+            "executable": "c:/Users/lenovo/OneDrive - Fracktal Works Private Limited/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/build/mega2560/firmware.elf",
             "projectEnvName": "simulator_linux_debug",
-            "toolchainBinDir": "C:/Users/Vijay/.platformio/packages/toolchain-atmelavr/bin",
+            "toolchainBinDir": "C:/Users/lenovo/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": {
                 "type": "PlatformIO",
@@ -25,18 +25,18 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "C:/Users/Vijay/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/build/mega2560/firmware.elf",
+            "executable": "c:/Users/lenovo/OneDrive - Fracktal Works Private Limited/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/build/mega2560/firmware.elf",
             "projectEnvName": "simulator_linux_debug",
-            "toolchainBinDir": "C:/Users/Vijay/.platformio/packages/toolchain-atmelavr/bin",
+            "toolchainBinDir": "C:/Users/lenovo/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (without uploading)",
-            "executable": "C:/Users/Vijay/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/build/mega2560/firmware.elf",
+            "executable": "c:/Users/lenovo/OneDrive - Fracktal Works Private Limited/Documents/GitHub/Volterra-Marlin-2/Marlin-2.1.2.1/.pio/build/mega2560/firmware.elf",
             "projectEnvName": "simulator_linux_debug",
-            "toolchainBinDir": "C:/Users/Vijay/.platformio/packages/toolchain-atmelavr/bin",
+            "toolchainBinDir": "C:/Users/lenovo/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "loadMode": "manual"
         }
