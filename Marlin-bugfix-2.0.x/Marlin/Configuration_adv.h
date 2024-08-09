@@ -1998,13 +1998,26 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
-//#define LIN_ADVANCE
+#define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration_adv.h
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
   #define LIN_ADVANCE_K 0.22    // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
   //#define ALLOW_LOW_EJERK     // Allow a DEFAULT_EJERK value of <10. Recommended for direct drive hotends.
+=======
+  #if ENABLED(DISTINCT_E_FACTORS)
+    #define ADVANCE_K { 0.22 }    // (mm) Compression length per 1mm/s extruder speed, per extruder
+  #else
+    #define ADVANCE_K 0.22        // (mm) Compression length applying to all extruders
+  #endif
+  //#define ADVANCE_K_EXTRA       // Add a second linear advance constant, configurable with M900 L.
+  //#define LA_DEBUG              // Print debug information to serial during operation. Disable for production use.
+  #define EXPERIMENTAL_SCURVE   // Allow S-Curve Acceleration to be used with LA.
+  #define ALLOW_LOW_EJERK       // Allow a DEFAULT_EJERK value of <10. Recommended for direct drive hotends.
+  //#define EXPERIMENTAL_I2S_LA   // Allow I2S_STEPPER_STREAM to be used with LA. Performance degrades as the LA step rate reaches ~20kHz.
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration_adv.h
 #endif
 
 // @section leveling
@@ -2741,11 +2754,16 @@
     //#define Y2_HOLD_MULTIPLIER 0.5
   #endif
 
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration_adv.h
   #if AXIS_IS_TMC(Z)
     #define Z_CURRENT       1200
+=======
+  #if AXIS_IS_TMC_CONFIG(Z)
+    #define Z_CURRENT       1800    //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration_adv.h
     #define Z_CURRENT_HOME  Z_CURRENT
-    #define Z_MICROSTEPS     16
-    #define Z_RSENSE          0.11
+    #define Z_MICROSTEPS     4
+    #define Z_RSENSE         0.11
     #define Z_CHAIN_POS      -1
     //#define Z_INTERPOLATE  true
     //#define Z_HOLD_MULTIPLIER 0.5
@@ -2811,9 +2829,45 @@
     //#define K_HOLD_MULTIPLIER 0.5
   #endif
 
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration_adv.h
   #if AXIS_IS_TMC(E0)
     #define E0_CURRENT      1000
     #define E0_MICROSTEPS    16
+=======
+  #if AXIS_IS_TMC_CONFIG(U)
+    #define U_CURRENT      800
+    #define U_CURRENT_HOME U_CURRENT
+    #define U_MICROSTEPS     8
+    #define U_RSENSE         0.11
+    #define U_CHAIN_POS     -1
+    //#define U_INTERPOLATE  true
+    //#define U_HOLD_MULTIPLIER 0.5
+  #endif
+
+  #if AXIS_IS_TMC_CONFIG(V)
+    #define V_CURRENT      800
+    #define V_CURRENT_HOME V_CURRENT
+    #define V_MICROSTEPS     8
+    #define V_RSENSE         0.11
+    #define V_CHAIN_POS     -1
+    //#define V_INTERPOLATE  true
+    //#define V_HOLD_MULTIPLIER 0.5
+  #endif
+
+  #if AXIS_IS_TMC_CONFIG(W)
+    #define W_CURRENT      800
+    #define W_CURRENT_HOME W_CURRENT
+    #define W_MICROSTEPS     8
+    #define W_RSENSE         0.11
+    #define W_CHAIN_POS     -1
+    //#define W_INTERPOLATE  true
+    //#define W_HOLD_MULTIPLIER 0.5
+  #endif
+
+  #if AXIS_IS_TMC_CONFIG(E0)
+    #define E0_CURRENT       850    //FW
+    #define E0_MICROSTEPS    8
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration_adv.h
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
     //#define E0_INTERPOLATE true

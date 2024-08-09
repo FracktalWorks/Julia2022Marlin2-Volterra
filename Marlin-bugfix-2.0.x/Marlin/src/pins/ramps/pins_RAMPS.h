@@ -201,6 +201,7 @@
 //
 // Temperature Sensors
 //
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/src/pins/ramps/pins_RAMPS.h
 // #ifndef TEMP_0_PIN
 //   #define TEMP_0_PIN                          13//15  // Analog Input
 // #endif
@@ -217,15 +218,25 @@
 #define TEMP_2_PIN         13   // Analog Input
 #define TEMP_3_PIN         15   // Analog Input
 #define TEMP_BED_PIN       14   // Analog Input
+=======
+#ifndef TEMP_0_PIN
+  #define TEMP_0_PIN                          15  // Analog Input
+#endif
+#ifndef TEMP_1_PIN
+  #define TEMP_1_PIN                          3  // Analog Input
+#endif
+#define TEMP_2_PIN         13   // Analog Input
+#define TEMP_3_PIN         4   // Analog Input
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/src/pins/ramps/pins_RAMPS.h
 
 ////////////Fracktal Works Change end/////////////////
 
 //
 // SPI for MAX Thermocouple
 //
-#ifndef TEMP_0_CS_PIN
-  #define TEMP_0_CS_PIN                       66  // Don't use 53 if using Display/SD card (SDSS) or 49 (SD_DETECT_PIN)
-#endif
+// #ifndef TEMP_0_CS_PIN
+//   #define TEMP_0_CS_PIN                       66  // Don't use 53 if using Display/SD card (SDSS) or 49 (SD_DETECT_PIN)
+// #endif
 
 //
 // Heaters / Fans

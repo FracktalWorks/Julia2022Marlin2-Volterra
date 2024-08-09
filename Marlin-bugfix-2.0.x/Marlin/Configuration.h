@@ -143,7 +143,11 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define CUSTOM_MACHINE_NAME "Volterra Dual 24V UART jumpers with TMC2209 on MKS GenL v2.1"
+=======
+#define CUSTOM_MACHINE_NAME "FW Volterra 400 ALH - Test 09082024"    //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -496,10 +500,17 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define TEMP_SENSOR_0 20
 #define TEMP_SENSOR_1 20
 #define TEMP_SENSOR_2 3
 #define TEMP_SENSOR_3 3
+=======
+#define TEMP_SENSOR_0 1047    //FW
+#define TEMP_SENSOR_1 998    //FW
+#define TEMP_SENSOR_2 998    
+#define TEMP_SENSOR_3 998     //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 #define TEMP_SENSOR_4 0
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
@@ -512,7 +523,7 @@
 #define TEMP_SENSOR_REDUNDANT 0
 
 // Dummy thermistor constant temperature readings, for use with 998 and 999
-#define DUMMY_THERMISTOR_998_VALUE  25
+#define DUMMY_THERMISTOR_998_VALUE  69
 #define DUMMY_THERMISTOR_999_VALUE 100
 
 // Resistor values when using MAX31865 sensors (-5) on TEMP_SENSOR_0 / 1
@@ -521,6 +532,7 @@
 //#define MAX31865_SENSOR_OHMS_1      100
 //#define MAX31865_CALIBRATION_OHMS_1 430
 
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define TEMP_RESIDENCY_TIME         1  // (seconds) Time to wait for hotend to "settle" in M109
 #define TEMP_WINDOW                  1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_HYSTERESIS              4  // (°C) Temperature proximity considered "close enough" to the target
@@ -532,6 +544,25 @@
 #define TEMP_CHAMBER_RESIDENCY_TIME 10  // (seconds) Time to wait for chamber to "settle" in M191
 #define TEMP_CHAMBER_WINDOW          1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_CHAMBER_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
+=======
+#if HAS_E_TEMP_SENSOR
+  #define TEMP_RESIDENCY_TIME          1 // (seconds) Time to wait for hotend to "settle" in M109    //FW
+  #define TEMP_WINDOW                  1  // (°C) Temperature proximity for the "temperature reached" timer
+  #define TEMP_HYSTERESIS              4  // (°C) Temperature proximity considered "close enough" to the target //FW
+#endif
+
+#if TEMP_SENSOR_BED
+  #define TEMP_BED_RESIDENCY_TIME      2  // (seconds) Time to wait for bed to "settle" in M190      //FW
+  #define TEMP_BED_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
+  #define TEMP_BED_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
+#endif
+
+#if TEMP_SENSOR_CHAMBER
+  #define TEMP_CHAMBER_RESIDENCY_TIME  0  // (seconds) Time to wait for chamber to "settle" in M191
+  #define TEMP_CHAMBER_WINDOW          15  // (°C) Temperature proximity for the "temperature reached" timer
+  #define TEMP_CHAMBER_HYSTERESIS      20  // (°C) Temperature proximity considered "close enough" to the target
+#endif
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 
 /**
  * Redundant Temperature Sensor (TEMP_SENSOR_REDUNDANT)
@@ -565,10 +596,17 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define HEATER_0_MAXTEMP 480//275
 #define HEATER_1_MAXTEMP 460//275
 #define HEATER_2_MAXTEMP 120//275
 #define HEATER_3_MAXTEMP 80//275
+=======
+#define HEATER_0_MAXTEMP 480        //FW
+#define HEATER_1_MAXTEMP 450        //FW
+#define HEATER_2_MAXTEMP 100        //FW
+#define HEATER_3_MAXTEMP 100        //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 #define HEATER_4_MAXTEMP 275
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
@@ -937,14 +975,22 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100,  100, 503.937, 140 }
+=======
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 345 }      //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define DEFAULT_MAX_FEEDRATE          { 200, 200, 20, 45 }
+=======
+#define DEFAULT_MAX_FEEDRATE          { 200, 200, 20, 120 }       //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -957,11 +1003,19 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define DEFAULT_MAX_ACCELERATION       { 1500, 1500, 100, 10000 }
+=======
+#define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 100, 8000 }    //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
   #define MAX_ACCEL_EDIT_VALUES        { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
+=======
+  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 8000 } // ...or, set your own edit limits
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 #endif
 
 /**
@@ -1210,7 +1264,11 @@
 #define XY_PROBE_FEEDRATE (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define Z_PROBE_FEEDRATE_FAST (2*60)
+=======
+#define Z_PROBE_FEEDRATE_FAST (4*60)//(2*60)    //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 15)
@@ -1277,9 +1335,15 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define Z_CLEARANCE_DEPLOY_PROBE   5 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  3 // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     1 // Z Clearance between multiple probes
+=======
+#define Z_CLEARANCE_DEPLOY_PROBE   3 // Z Clearance for Deploy/Stow     //FW
+#define Z_CLEARANCE_BETWEEN_PROBES  3 // Z Clearance between probe points     //FW
+#define Z_CLEARANCE_MULTI_PROBE     1 // Z Clearance between multiple probes   //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -5//-5 // Farthest distance below the trigger-point to go before stopping
@@ -1351,9 +1415,15 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define INVERT_X_DIR    false//false
 #define INVERT_Y_DIR    false//false
 #define INVERT_Z_DIR    true//true
+=======
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR false    //FW
+#define INVERT_Z_DIR false     //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -1399,16 +1469,27 @@
 // @section machine
 
 // The size of the printable area
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
   #define X_BED_SIZE  395
   #define Y_BED_SIZE  400
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
+=======
+#define X_BED_SIZE 400    //FW
+#define Y_BED_SIZE 400    //FW
+
+// Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
+<<<<<<< Updated upstream:Marlin-bugfix-2.0.x/Marlin/Configuration.h
 #define Z_MAX_POS 415//420
+=======
+#define Z_MAX_POS 428     //FW
+>>>>>>> Stashed changes:Marlin-2.1.2.1/Marlin/Configuration.h
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
